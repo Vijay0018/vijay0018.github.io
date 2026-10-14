@@ -315,3 +315,324 @@ section h2 {
 .gripen-project {
     border-left-color: #b78cff;
 }
+/* =========================================
+   PREMIUM HERO SECTION
+   ========================================= */
+
+.hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 110px 8% 80px;
+    background:
+        radial-gradient(circle at 80% 30%, rgba(67, 165, 255, 0.18), transparent 28%),
+        radial-gradient(circle at 15% 80%, rgba(53, 199, 154, 0.10), transparent 25%),
+        linear-gradient(135deg, #061729 0%, #081f38 55%, #0b2948 100%);
+}
+
+/* Subtle technology grid */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 45px 45px;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1350px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.hero-text {
+    max-width: 760px;
+}
+
+.hero-tag {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 9px 16px;
+    border: 1px solid rgba(67, 165, 255, 0.35);
+    border-radius: 30px;
+    background: rgba(67, 165, 255, 0.10);
+    color: #69b8ff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+}
+
+.hero h1 {
+    margin: 0 0 18px;
+    color: #ffffff;
+    font-size: clamp(48px, 6vw, 82px);
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    background: linear-gradient(90deg, #43a5ff, #6cc8ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero h2 {
+    max-width: 720px;
+    margin-bottom: 24px;
+    color: #e6eef7;
+    font-size: clamp(25px, 3vw, 40px);
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+.hero-description {
+    max-width: 680px;
+    margin-bottom: 28px;
+    color: #aec1d4;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hero-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 34px;
+}
+
+.hero-skills span {
+    padding: 10px 15px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.06);
+    color: #dce8f5;
+    font-size: 14px;
+    backdrop-filter: blur(10px);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.hero-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2997ff, #43a5ff);
+    color: #ffffff;
+    box-shadow: 0 12px 35px rgba(41, 151, 255, 0.28);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 42px rgba(41, 151, 255, 0.40);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255,255,255,0.22);
+    background: rgba(255,255,255,0.05);
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    border-color: #43a5ff;
+    background: rgba(67,165,255,0.10);
+}
+
+/* PROFILE VISUAL */
+
+.hero-visual {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+}
+
+.photo-frame {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 32px;
+    background: rgba(255,255,255,0.06);
+    box-shadow:
+        0 35px 80px rgba(0,0,0,0.38),
+        0 0 70px rgba(67,165,255,0.15);
+}
+
+.photo-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(
+        to top,
+        rgba(6,23,41,0.42),
+        transparent 45%
+    );
+    pointer-events: none;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.6s ease;
+}
+
+.photo-frame:hover img {
+    transform: scale(1.035);
+}
+
+/* Floating professional cards */
+
+.floating-card {
+    position: absolute;
+    z-index: 4;
+    min-width: 165px;
+    padding: 14px 18px;
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 14px;
+    background: rgba(8,31,56,0.82);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.28);
+    backdrop-filter: blur(14px);
+}
+
+.floating-card strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.floating-card span {
+    color: #9eb4c9;
+    font-size: 12px;
+}
+
+.card-powerbi {
+    top: 11%;
+    left: -55px;
+}
+
+.card-lean {
+    right: -45px;
+    bottom: 24%;
+}
+
+.card-supply {
+    left: -45px;
+    bottom: 8%;
+}
+
+/* Decorative glow behind portrait */
+
+.hero-visual::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background: rgba(67,165,255,0.18);
+    filter: blur(90px);
+    transform: translate(-50%, -50%);
+}
+
+/* Mobile layout */
+
+@media (max-width: 950px) {
+    .hero {
+        padding: 120px 7% 70px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-visual {
+        width: 82%;
+        max-width: 440px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 105px 22px 60px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+
+    .hero-visual {
+        width: 92%;
+    }
+
+    .floating-card {
+        min-width: 135px;
+        padding: 11px 13px;
+    }
+
+    .card-powerbi {
+        left: -18px;
+    }
+
+    .card-lean {
+        right: -18px;
+    }
+
+    .card-supply {
+        left: -18px;
+    }
+}
