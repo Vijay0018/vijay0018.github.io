@@ -147,3 +147,100 @@ section h2 {
         padding: 60px 6%;
     }
 }
+
+/* ========================================
+   FEATURED PROJECTS - PROFESSIONAL DESIGN
+   ======================================== */
+
+#projects {
+    background: #f4f7fa;
+    padding: 90px 8%;
+}
+
+#projects > h2 {
+    font-size: 42px;
+    color: #071a2f;
+    margin-bottom: 45px;
+}
+
+.project-card {
+    background: #071a2f;
+    color: #ffffff;
+    padding: 45px;
+    margin-bottom: 35px;
+    border-radius: 18px;
+    border: 1px solid #233b52;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.18);
+}
+
+.project-label {
+    display: inline-block;
+    background: #17344d;
+    color: #28c5c9;
+    padding: 9px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+}
+
+.project-card h3 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.project-card p {
+    color: #d5dee7;
+    margin-bottom: 18px;
+}
+
+.project-card ul {
+    padding-left: 22px;
+    margin: 22px 0;
+}
+
+.project-card li {
+    color: #e7edf3;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.project-card li::marker {
+    color: #28c5c9;
+}
+
+.qtech-project {
+    border-left: 5px solid #28c5c9;
+}
+
+.gripen-project {
+    border-left: 5px solid #28c5c9;
+}
+
+@media (max-width: 768px) {
+    #projects {
+        padding: 60px 6%;
+    }
+
+    #projects > h2 {
+        font-size: 32px;
+    }
+
+    .project-card {
+        padding: 28px 22px;
+    }
+
+    .project-card h3 {
+        font-size: 25px;
+    }
+}
+
