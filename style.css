@@ -1477,3 +1477,25 @@ section h2 {
         margin-top: 25px;
     }
 }
+/* Experience company and date */
+.experience-company {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.experience-date {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px;
+  border-radius: 20px;
+  background: #eef7ff;
+  border: 1px solid #cfe7ff;
+  color: #0874c9;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
