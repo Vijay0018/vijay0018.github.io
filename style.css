@@ -1499,3 +1499,382 @@ section h2 {
   white-space: nowrap;
 }
 
+/* =====================================================
+   POWER BI PROJECT — PREMIUM SHOWCASE
+   ===================================================== */
+
+.powerbi-showcase {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    border: 1px solid rgba(45, 165, 255, 0.28);
+    border-left: 4px solid #2da5ff;
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 90% 10%, rgba(0, 153, 255, 0.18), transparent 32%),
+        linear-gradient(135deg, #071b30 0%, #092541 55%, #07192c 100%);
+    box-shadow: 0 25px 70px rgba(5, 25, 48, 0.18);
+}
+
+.powerbi-showcase::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -180px;
+    top: -190px;
+    border-radius: 50%;
+    background: rgba(43, 166, 255, 0.12);
+    filter: blur(15px);
+    pointer-events: none;
+}
+
+.project-showcase-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 55px;
+    padding: 55px;
+    align-items: center;
+}
+
+.project-story {
+    position: relative;
+    z-index: 2;
+}
+
+.project-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.powerbi-showcase .project-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 16px;
+    border-radius: 999px;
+    background: rgba(47, 164, 255, 0.13);
+    border: 1px solid rgba(72, 181, 255, 0.25);
+    color: #55b8ff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.project-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #a9c8e4;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #39e6a3;
+    box-shadow: 0 0 14px rgba(57, 230, 163, 0.85);
+}
+
+.powerbi-showcase h3 {
+    margin: 0 0 14px;
+    color: #ffffff;
+    font-size: clamp(32px, 3vw, 50px);
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+}
+
+.powerbi-showcase p {
+    color: #b9cee1;
+    line-height: 1.8;
+}
+
+.powerbi-showcase strong {
+    color: #ffffff;
+}
+
+.powerbi-showcase ul {
+    margin: 25px 0;
+    padding-left: 20px;
+}
+
+.powerbi-showcase li {
+    color: #c6d7e6;
+    margin: 11px 0;
+    line-height: 1.65;
+}
+
+.powerbi-showcase li::marker {
+    color: #35d5e5;
+}
+
+/* KPI cards */
+
+.project-kpis {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 28px 0;
+}
+
+.project-kpi {
+    padding: 17px 14px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(104, 184, 242, 0.18);
+    backdrop-filter: blur(8px);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.project-kpi:hover {
+    transform: translateY(-5px);
+    border-color: rgba(65, 182, 255, 0.65);
+}
+
+.project-kpi strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #48b7ff;
+    font-size: 24px;
+}
+
+.project-kpi span {
+    color: #90abc2;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+/* Technology pills */
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 25px;
+}
+
+.project-tech span {
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: #a9c9e5;
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(112, 180, 230, 0.16);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* RIGHT SIDE — ANALYTICS VISUAL */
+
+.project-visual {
+    position: relative;
+    min-height: 510px;
+    padding: 28px;
+    overflow: hidden;
+    border-radius: 24px;
+    background:
+        linear-gradient(rgba(51, 145, 215, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(51, 145, 215, 0.07) 1px, transparent 1px),
+        linear-gradient(145deg, #06182a, #0b2a49);
+    background-size: 38px 38px, 38px 38px, auto;
+    border: 1px solid rgba(71, 171, 240, 0.23);
+    box-shadow: inset 0 0 50px rgba(20, 126, 204, 0.08);
+}
+
+.visual-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.visual-header span {
+    color: #70bfff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.visual-header strong {
+    font-size: 17px;
+}
+
+/* mini dashboard KPI row */
+
+.visual-kpis {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.visual-kpi {
+    padding: 14px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(84, 179, 244, 0.17);
+}
+
+.visual-kpi small {
+    display: block;
+    color: #7799b5;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.visual-kpi strong {
+    display: block;
+    margin-top: 6px;
+    color: #ffffff;
+    font-size: 21px;
+}
+
+/* chart */
+
+.mini-chart {
+    position: relative;
+    height: 180px;
+    margin-top: 20px;
+    padding: 18px 15px 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 10px;
+    border-radius: 18px;
+    background: rgba(1, 13, 26, 0.35);
+    border: 1px solid rgba(85, 172, 233, 0.13);
+}
+
+.chart-bar {
+    position: relative;
+    width: 12%;
+    min-width: 22px;
+    border-radius: 7px 7px 3px 3px;
+    background: linear-gradient(to top, #1479c9, #41d9ed);
+    box-shadow: 0 0 20px rgba(50, 196, 234, 0.18);
+    animation: projectBarRise 1.4s ease both;
+}
+
+.chart-bar:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.chart-bar:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.chart-bar:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.chart-bar:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+@keyframes projectBarRise {
+    from {
+        transform: scaleY(0.08);
+        transform-origin: bottom;
+        opacity: 0.3;
+    }
+
+    to {
+        transform: scaleY(1);
+        transform-origin: bottom;
+        opacity: 1;
+    }
+}
+
+/* dashboard footer */
+
+.visual-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.visual-signal {
+    padding: 14px;
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(91, 177, 237, 0.15);
+}
+
+.visual-signal small {
+    display: block;
+    color: #789ab5;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.visual-signal strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* subtle floating glow */
+
+.project-visual::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    right: -60px;
+    bottom: -70px;
+    border-radius: 50%;
+    background: rgba(45, 169, 255, 0.13);
+    filter: blur(25px);
+    pointer-events: none;
+}
+
+/* responsive */
+
+@media (max-width: 1000px) {
+    .project-showcase-grid {
+        grid-template-columns: 1fr;
+        padding: 35px;
+    }
+
+    .project-visual {
+        min-height: 460px;
+    }
+}
+
+@media (max-width: 650px) {
+    .project-showcase-grid {
+        padding: 25px 18px;
+    }
+
+    .powerbi-showcase h3 {
+        font-size: 32px;
+    }
+
+    .project-kpis,
+    .visual-kpis {
+        grid-template-columns: 1fr;
+    }
+
+    .project-visual {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .visual-footer {
+        grid-template-columns: 1fr;
+    }
+}
