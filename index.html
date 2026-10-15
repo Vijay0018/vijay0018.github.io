@@ -895,6 +895,36 @@
         </section>
 
     </main>
+    
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
 
+        const powerBIProject = document.querySelector(".powerbi-case-study");
+
+        if (!powerBIProject) return;
+
+        const observer = new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+                        powerBIProject.classList.add("pbi-visible");
+                    } else {
+                        powerBIProject.classList.remove("pbi-visible");
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.18
+            }
+        );
+
+        observer.observe(powerBIProject);
+
+    });
+</script>
 </body>
 </html>
