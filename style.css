@@ -3453,3 +3453,278 @@ section h2 {
         transform: none !important;
     }
 }
+
+/* =====================================================
+   POWER BI DASHBOARD GALLERY
+   ===================================================== */
+
+.pbi-gallery-section {
+    margin-top: 42px;
+    padding: 30px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #f7fbff 0%, #eef7ff 100%);
+    border: 1px solid #d9eaff;
+    text-align: center;
+}
+
+.pbi-gallery-heading span {
+    display: block;
+    margin-bottom: 8px;
+    color: #168cf2;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.pbi-gallery-heading h4 {
+    margin: 0 0 8px;
+    color: #102f63;
+    font-size: 25px;
+}
+
+.pbi-gallery-heading p {
+    margin: 0 auto 22px;
+    color: #58708e;
+    font-size: 14px;
+}
+
+/* VIEW DASHBOARD BUTTON */
+
+.pbi-view-dashboard {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 14px 24px;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #147de1, #28a7ff);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 12px 30px rgba(24, 139, 234, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pbi-view-dashboard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 35px rgba(24, 139, 234, 0.35);
+}
+
+.pbi-button-arrow {
+    font-size: 18px;
+    transition: transform 0.25s ease;
+}
+
+.pbi-view-dashboard:hover .pbi-button-arrow {
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   DASHBOARD MODAL
+   ===================================================== */
+
+.pbi-gallery-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+    background: rgba(5, 20, 39, 0.82);
+    backdrop-filter: blur(12px);
+}
+
+.pbi-gallery-modal.active {
+    display: flex;
+}
+
+.pbi-gallery-modal-content {
+    position: relative;
+    width: min(1400px, 96vw);
+    max-height: 94vh;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 35px 100px rgba(0, 0, 0, 0.35);
+    animation: pbiModalOpen 0.35s ease;
+}
+
+@keyframes pbiModalOpen {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* CLOSE BUTTON */
+
+.pbi-gallery-close {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    z-index: 10;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 50%;
+    background: #102f63;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.pbi-gallery-close:hover {
+    transform: rotate(90deg);
+    background: #168cf2;
+}
+
+
+/* HEADER */
+
+.pbi-modal-header {
+    padding: 22px 75px 18px 28px;
+    border-bottom: 1px solid #e4edf7;
+    background: #ffffff;
+}
+
+.pbi-modal-header span {
+    display: block;
+    margin-bottom: 4px;
+    color: #168cf2;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.pbi-modal-header h3 {
+    margin: 0;
+    color: #102f63;
+    font-size: 24px;
+}
+
+
+/* DASHBOARD IMAGE */
+
+.pbi-dashboard-viewer {
+    padding: 18px 22px 12px;
+    background: #f3f8fd;
+}
+
+.pbi-dashboard-viewer img {
+    display: block;
+    width: 100%;
+    max-height: 68vh;
+    object-fit: contain;
+    margin: auto;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(20, 60, 100, 0.12);
+}
+
+
+/* FOOTER NAVIGATION */
+
+.pbi-gallery-controls {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 22px 20px;
+    background: #ffffff;
+}
+
+.pbi-gallery-controls button {
+    padding: 11px 18px;
+    border: 1px solid #d3e3f3;
+    border-radius: 10px;
+    background: #f4f9fd;
+    color: #173d6b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.pbi-gallery-controls button:hover {
+    color: #ffffff;
+    background: #168cf2;
+    border-color: #168cf2;
+}
+
+.pbi-gallery-info {
+    text-align: center;
+}
+
+.pbi-gallery-info strong {
+    display: block;
+    color: #102f63;
+    font-size: 15px;
+}
+
+.pbi-gallery-info span {
+    display: block;
+    margin-top: 3px;
+    color: #7890aa;
+    font-size: 12px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .pbi-gallery-section {
+        padding: 22px 16px;
+    }
+
+    .pbi-gallery-heading h4 {
+        font-size: 21px;
+    }
+
+    .pbi-gallery-modal {
+        padding: 10px;
+    }
+
+    .pbi-gallery-modal-content {
+        border-radius: 16px;
+    }
+
+    .pbi-modal-header {
+        padding: 18px 60px 14px 18px;
+    }
+
+    .pbi-modal-header h3 {
+        font-size: 18px;
+    }
+
+    .pbi-dashboard-viewer {
+        padding: 12px;
+    }
+
+    .pbi-gallery-controls {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .pbi-gallery-info {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .pbi-gallery-controls button {
+        width: 100%;
+    }
+}
