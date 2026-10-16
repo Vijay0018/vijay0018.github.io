@@ -762,7 +762,56 @@
 
     </div>
 
+</div> 
+  <!-- POWER BI DASHBOARD GALLERY -->
+<div class="pbi-gallery-section">
+
+    <div class="pbi-gallery-heading">
+        <span>INTERACTIVE PROJECT WALKTHROUGH</span>
+        <h4>Explore the Full Power BI Dashboard</h4>
+        <p>View all six analytical pages covering end-to-end manufacturing operations.</p>
+    </div>
+
+    <button class="pbi-view-dashboard" onclick="openDashboardGallery()">
+        <span>View Dashboard</span>
+        <span class="pbi-button-arrow">→</span>
+    </button>
+
 </div>
+
+<!-- DASHBOARD MODAL -->
+<div id="pbiDashboardModal" class="pbi-dashboard-modal">
+
+    <div class="pbi-modal-content">
+
+        <button class="pbi-modal-close" onclick="closeDashboardGallery()">×</button>
+
+        <div class="pbi-modal-header">
+            <span>APEX BRAKE COMPONENTS</span>
+            <h3>Power BI Manufacturing Analytics</h3>
+            <p id="pbiPageTitle">Production Overview</p>
+        </div>
+
+        <div class="pbi-dashboard-image-wrap">
+            <img
+                id="pbiDashboardImage"
+                src="01-production-overview.png"
+                alt="Power BI Production Overview Dashboard">
+        </div>
+
+        <div class="pbi-gallery-navigation">
+
+            <button onclick="previousDashboard()">← Previous</button>
+
+            <span id="pbiPageCounter">01 / 06</span>
+
+            <button onclick="nextDashboard()">Next →</button>
+
+        </div>
+
+    </div>
+
+</div>         
  <div class="project-card qtech-project">
 
     <span class="project-label">LEAN SIX SIGMA • DMAIC</span>
