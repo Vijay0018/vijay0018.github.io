@@ -3832,66 +3832,171 @@ section h2 {
     }
 }
 
-/* DESKTOP HERO - TARGET LAYOUT */
-@media (min-width: 901px) {
+/* =====================================================
+   FINAL HERO DESKTOP DESIGN
+   ===================================================== */
+
+@media (min-width: 1100px) {
 
     .hero-v2 {
-        min-height: 100vh;
-        padding: 80px 4% 40px;
+        min-height: 900px;
+        height: 100vh;
+        max-height: 980px;
         overflow: hidden;
     }
 
     .hero-v2-inner {
-        width: 100%;
-        max-width: 1600px;
-        min-height: calc(100vh - 120px);
+        width: min(94%, 1600px);
+        height: 100%;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 48% 52%;
         align-items: center;
         position: relative;
     }
 
     .hero-v2-copy {
+        width: 100%;
+        max-width: 760px;
         position: relative;
         z-index: 5;
-        max-width: 760px;
     }
 
-    .hero-v2-visual {
-        position: absolute;
-        right: -2%;
-        bottom: -40px;
-        width: 58%;
-        height: 95%;
-        z-index: 2;
+    .hero-v2-eyebrow {
+        width: fit-content;
+        padding: 15px 28px;
+        margin-bottom: 58px;
+        border: 2px solid #159cff;
+        border-radius: 40px;
+        white-space: nowrap;
     }
 
-    .hero-v2-photo-frame {
-        position: absolute;
-        right: 8%;
-        bottom: 0;
-        width: 72%;
-        height: 100%;
-        overflow: hidden;
-        border-radius: 0;
-        background: transparent;
+    .hero-v2-title {
+        font-size: clamp(70px, 5.5vw, 105px);
+        line-height: 0.91;
+        letter-spacing: -4px;
+        margin-bottom: 38px;
     }
 
-    .hero-v2-photo-frame img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center top;
-        display: block;
+    .hero-v2-intro {
+        max-width: 700px;
+        font-size: 21px;
+        line-height: 1.55;
+        margin-bottom: 42px;
     }
 
     .hero-v2-actions {
+        display: flex;
         flex-direction: row;
+        align-items: center;
+        gap: 22px;
     }
 
     .hero-v2-primary,
     .hero-v2-secondary {
         width: auto;
+        min-width: 220px;
     }
+
+    .hero-v2-visual {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 58%;
+        height: 100%;
+        z-index: 2;
+        overflow: visible;
+        pointer-events: none;
+    }
+
+    .hero-v2-photo-frame {
+        position: absolute;
+        width: 72%;
+        height: 94%;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .hero-v2-photo-frame img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center top;
+        border-radius: 0;
+    }
+
+    .hero-v2-visual::before {
+        display: none !important;
+    }
+
+    .hero-v2-visual::after {
+        content: "";
+        position: absolute;
+        right: -10%;
+        bottom: 4%;
+        width: 72%;
+        height: 55%;
+        border-radius: 50%;
+        border: 1px solid rgba(20, 155, 255, 0.18);
+        transform: rotate(-12deg);
+        z-index: -1;
+    }
+
+    .hero-v2-card {
+        position: absolute;
+        right: 1%;
+        width: 245px;
+        padding: 0 0 14px 62px;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        color: #ffffff;
+        z-index: 6;
+    }
+
+    .hero-card-top {
+        top: 12%;
+    }
+
+    .hero-card-bottom {
+        top: 43%;
+    }
+
+    .hero-v2-card small {
+        color: #73c9ff;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .hero-v2-card strong {
+        display: block;
+        margin-top: 5px;
+        font-size: 18px;
+        line-height: 1.25;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .hero-v2-index {
+        position: absolute;
+        right: 1%;
+        top: 68%;
+        width: 245px;
+        padding-left: 62px;
+        color: #ffffff;
+        z-index: 6;
+    }
+
+    .hero-v2-index span {
+        color: #73c9ff;
+    }
+
 }
