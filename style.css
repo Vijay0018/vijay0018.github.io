@@ -4486,3 +4486,431 @@ section h2 {
         z-index: 30;
     }
 }
+/* =========================================================
+   FINAL PROFESSIONAL HERO
+   ========================================================= */
+
+.hero-pro {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 78px);
+    min-height: 760px;
+    max-height: 920px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 62% 38%, rgba(0, 153, 255, 0.16), transparent 30%),
+        linear-gradient(115deg, #03192c 0%, #052b4b 55%, #03243d 100%);
+    color: #ffffff;
+}
+
+.hero-pro-layout {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+/* BACKGROUND CURVES */
+
+.hero-pro-bg-circle {
+    position: absolute;
+    border: 1px solid rgba(0, 153, 255, 0.20);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero-circle-one {
+    width: 650px;
+    height: 650px;
+    right: -330px;
+    top: -250px;
+}
+
+.hero-circle-two {
+    width: 760px;
+    height: 760px;
+    right: -360px;
+    bottom: -470px;
+    background: rgba(0, 102, 204, 0.12);
+}
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.hero-pro-left {
+    position: absolute;
+    left: 4%;
+    top: 8%;
+    width: 47%;
+    z-index: 20;
+}
+
+/* SKILLS PILL */
+
+.hero-pro-skills {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    padding: 13px 28px;
+    border: 1.5px solid #0aa8ff;
+    border-radius: 40px;
+    color: #dceeff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+}
+
+.hero-pro-skills b {
+    color: #20b6ff;
+    font-size: 14px;
+}
+
+/* MAIN TITLE */
+
+.hero-pro-title {
+    margin: 54px 0 0;
+    font-size: clamp(64px, 5.2vw, 92px);
+    line-height: 0.92;
+    letter-spacing: -3px;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.hero-pro-title span {
+    display: block;
+    margin-top: 8px;
+    color: #0aa8ff;
+}
+
+/* INTRO */
+
+.hero-pro-intro {
+    position: relative;
+    max-width: 700px;
+    margin-top: 40px;
+    padding-left: 25px;
+    font-size: 19px;
+    line-height: 1.55;
+    color: #f1f7fc;
+}
+
+.hero-pro-intro::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 5px;
+    height: 100%;
+    min-height: 78px;
+    border-radius: 10px;
+    background: #0aa8ff;
+}
+
+.hero-pro-intro strong {
+    color: #0aa8ff;
+    font-weight: 800;
+}
+
+/* BUTTONS */
+
+.hero-pro-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 34px;
+}
+
+.hero-pro-primary,
+.hero-pro-secondary {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 62px;
+    padding: 0 32px;
+    border-radius: 16px;
+    font-size: 17px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-pro-primary {
+    color: #ffffff;
+    background: linear-gradient(135deg, #14b8ff, #0098f5);
+    box-shadow: 0 12px 35px rgba(0, 153, 255, 0.20);
+}
+
+.hero-pro-secondary {
+    color: #ffffff;
+    border: 1.5px solid #17b3ff;
+    background: rgba(3, 31, 52, 0.55);
+}
+
+.hero-pro-primary:hover,
+.hero-pro-secondary:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================================================
+   PORTRAIT
+   ========================================================= */
+
+.hero-pro-portrait {
+    position: absolute;
+    z-index: 10;
+    left: 40%;
+    bottom: -2px;
+    width: 45%;
+    height: 94%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-pro-portrait img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* subtle blend on portrait left edge */
+
+.hero-pro-portrait::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 25, 44, 0.55) 0%,
+            rgba(3, 25, 44, 0.08) 14%,
+            transparent 28%
+        );
+}
+
+/* =========================================================
+   RIGHT SIDE FEATURE LABELS
+   ========================================================= */
+
+.hero-pro-right {
+    position: absolute;
+    right: 3.5%;
+    top: 10%;
+    width: 19%;
+    height: 70%;
+    z-index: 25;
+}
+
+.hero-pro-feature {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    color: #ffffff;
+}
+
+.hero-pro-feature:nth-child(1) {
+    top: 0;
+}
+
+.hero-pro-feature:nth-child(2) {
+    top: 34%;
+}
+
+.hero-pro-feature:nth-child(3) {
+    top: 68%;
+}
+
+.hero-pro-feature-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-left: 45px;
+}
+
+.hero-pro-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    color: #0ab2ff;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.hero-pro-feature strong {
+    display: block;
+    font-size: 15px;
+    line-height: 1.25;
+    letter-spacing: 1.5px;
+    color: #f7fbff;
+    text-transform: uppercase;
+}
+
+.hero-pro-line {
+    position: relative;
+    width: 155px;
+    height: 55px;
+    margin-top: 6px;
+}
+
+.hero-pro-line::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    bottom: 7px;
+    width: 72px;
+    height: 1.5px;
+    background: #d9efff;
+    transform: rotate(-43deg);
+    transform-origin: left center;
+}
+
+.hero-pro-line::after {
+    content: "";
+    position: absolute;
+    left: 62px;
+    top: 9px;
+    width: 105px;
+    height: 1.5px;
+    background: #d9efff;
+}
+
+.hero-pro-dot {
+    position: absolute;
+    left: 7px;
+    bottom: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 0 12px #18b5ff;
+}
+
+/* =========================================================
+   DESKTOP REFINEMENT
+   ========================================================= */
+
+@media (min-width: 1500px) {
+
+    .hero-pro-left {
+        left: 4%;
+        top: 10%;
+        width: 46%;
+    }
+
+    .hero-pro-title {
+        font-size: 88px;
+    }
+
+    .hero-pro-portrait {
+        left: 39%;
+        width: 46%;
+        height: 96%;
+    }
+
+    .hero-pro-right {
+        right: 3%;
+        width: 18%;
+    }
+}
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .hero-pro {
+        height: auto;
+        min-height: 900px;
+    }
+
+    .hero-pro-left {
+        left: 5%;
+        top: 7%;
+        width: 58%;
+    }
+
+    .hero-pro-title {
+        font-size: 62px;
+    }
+
+    .hero-pro-portrait {
+        left: 45%;
+        width: 55%;
+        height: 72%;
+    }
+
+    .hero-pro-right {
+        display: none;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero-pro {
+        min-height: 960px;
+    }
+
+    .hero-pro-left {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        padding: 55px 24px 0;
+    }
+
+    .hero-pro-skills {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+        padding: 11px 10px;
+        font-size: 10px;
+    }
+
+    .hero-pro-title {
+        margin-top: 38px;
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .hero-pro-intro {
+        margin-top: 28px;
+        font-size: 16px;
+    }
+
+    .hero-pro-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-pro-primary,
+    .hero-pro-secondary {
+        width: 100%;
+    }
+
+    .hero-pro-portrait {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 420px;
+        opacity: 0.78;
+    }
+
+    .hero-pro-right {
+        display: none;
+    }
+}
