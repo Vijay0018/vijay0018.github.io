@@ -4000,3 +4000,344 @@ section h2 {
     }
 
 }
+/* =========================================================
+   FINAL HERO — REFERENCE MATCH
+   ========================================================= */
+
+#home.hero-v2 {
+    position: relative;
+    min-height: 820px;
+    height: calc(100vh - 78px);
+    max-height: 900px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 60% 40%, rgba(0, 153, 255, 0.18), transparent 30%),
+        linear-gradient(115deg, #03192c 0%, #05233d 52%, #032039 100%);
+}
+
+/* Main two-column structure */
+#home .hero-v2-inner {
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    height: 100%;
+    min-height: 820px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: stretch;
+    z-index: 2;
+}
+
+/* ================= LEFT SIDE ================= */
+
+#home .hero-v2-copy {
+    position: relative;
+    z-index: 10;
+    padding: 48px 0 40px 64px;
+}
+
+/* Top skill pill */
+#home .hero-v2-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    max-width: 100%;
+    height: 58px;
+    padding: 0 25px;
+    margin: 0 0 68px 0;
+    border: 1.5px solid #149eff;
+    border-radius: 40px;
+    color: #b9dcff;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+}
+
+/* Main heading */
+#home .hero-v2-title {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(72px, 5.6vw, 94px);
+    font-weight: 900;
+    line-height: 0.98;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+}
+
+#home .hero-v2-title span {
+    display: block;
+    margin-top: 5px;
+    color: #0b9cff;
+}
+
+/* Intro paragraph */
+#home .hero-v2-intro {
+    position: relative;
+    width: 720px;
+    max-width: 100%;
+    margin-top: 42px;
+    padding-left: 28px;
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 1.55;
+    font-weight: 400;
+}
+
+#home .hero-v2-intro::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 7px;
+    height: calc(100% - 4px);
+    border-radius: 10px;
+    background: #0b9cff;
+}
+
+#home .hero-v2-intro strong {
+    color: #0b9cff;
+    font-weight: 800;
+}
+
+/* Buttons */
+#home .hero-v2-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 38px;
+}
+
+#home .hero-v2-primary,
+#home .hero-v2-secondary {
+    min-width: 245px;
+    height: 72px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+#home .hero-v2-primary {
+    color: #ffffff;
+    background: linear-gradient(135deg, #0d8fff, #08a9ff);
+    border: 1px solid #24b7ff;
+}
+
+#home .hero-v2-secondary {
+    color: #ffffff;
+    background: transparent;
+    border: 2px solid #58c2ff;
+}
+
+/* ================= PORTRAIT ================= */
+
+#home .hero-v2-visual {
+    position: absolute;
+    left: 39%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    min-height: 820px;
+    z-index: 4;
+    pointer-events: none;
+}
+
+#home .hero-v2-photo-frame {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* IMPORTANT:
+   no reflection, no frame and no glow behind portrait */
+#home .hero-v2-photo-frame::before,
+#home .hero-v2-photo-frame::after,
+#home .hero-v2-visual::before,
+#home .hero-v2-visual::after {
+    display: none !important;
+    content: none !important;
+}
+
+#home .hero-v2-photo-frame img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    object-fit: cover;
+    object-position: center top;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* ================= RIGHT LABELS ================= */
+
+#home .hero-v2-sidecards {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 23%;
+    height: 100%;
+    z-index: 9;
+    pointer-events: none;
+}
+
+#home .hero-v2-sidecards > * {
+    position: absolute;
+    right: 3%;
+    width: 245px;
+    color: #ffffff;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+#home .hero-card-top {
+    top: 11%;
+}
+
+#home .hero-card-middle {
+    top: 31%;
+}
+
+#home .hero-card-bottom {
+    top: 51%;
+}
+
+/* Right-side index / third item if existing structure uses index */
+#home .hero-v2-index {
+    position: absolute;
+    right: 1.5%;
+    top: 53%;
+    width: 235px;
+    padding-left: 58px;
+    color: #ffffff;
+    z-index: 10;
+}
+
+/* Hide old bottom index and scroll decorations */
+#home .hero-v2-bottom,
+#home .hero-v2-scroll {
+    display: none !important;
+}
+
+/* Decorative background curves only */
+#home::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    right: -250px;
+    top: -250px;
+    border: 1px solid rgba(20, 158, 255, 0.20);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+#home::after {
+    content: "";
+    position: absolute;
+    width: 760px;
+    height: 440px;
+    right: -230px;
+    bottom: -270px;
+    border-radius: 50%;
+    background: rgba(9, 76, 130, 0.22);
+    transform: rotate(-8deg);
+    pointer-events: none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+    #home .hero-v2-inner {
+        grid-template-columns: 48% 52%;
+    }
+
+    #home .hero-v2-copy {
+        padding-left: 35px;
+    }
+
+    #home .hero-v2-title {
+        font-size: 68px;
+    }
+
+    #home .hero-v2-intro {
+        font-size: 18px;
+        width: 570px;
+    }
+
+    #home .hero-v2-visual {
+        left: 42%;
+        width: 50%;
+    }
+
+    #home .hero-v2-sidecards {
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+    #home.hero-v2 {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    #home .hero-v2-inner {
+        display: block;
+        min-height: 100vh;
+    }
+
+    #home .hero-v2-copy {
+        padding: 35px 24px 520px;
+    }
+
+    #home .hero-v2-eyebrow {
+        width: 100%;
+        margin-bottom: 40px;
+        font-size: 13px;
+    }
+
+    #home .hero-v2-title {
+        font-size: clamp(50px, 13vw, 70px);
+    }
+
+    #home .hero-v2-intro {
+        width: 100%;
+        font-size: 17px;
+    }
+
+    #home .hero-v2-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #home .hero-v2-primary,
+    #home .hero-v2-secondary {
+        width: 100%;
+    }
+
+    #home .hero-v2-visual {
+        left: 0;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        height: 500px;
+        min-height: 0;
+    }
+}
