@@ -3831,3 +3831,67 @@ section h2 {
         display: none;
     }
 }
+
+/* DESKTOP HERO - TARGET LAYOUT */
+@media (min-width: 901px) {
+
+    .hero-v2 {
+        min-height: 100vh;
+        padding: 80px 4% 40px;
+        overflow: hidden;
+    }
+
+    .hero-v2-inner {
+        width: 100%;
+        max-width: 1600px;
+        min-height: calc(100vh - 120px);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        position: relative;
+    }
+
+    .hero-v2-copy {
+        position: relative;
+        z-index: 5;
+        max-width: 760px;
+    }
+
+    .hero-v2-visual {
+        position: absolute;
+        right: -2%;
+        bottom: -40px;
+        width: 58%;
+        height: 95%;
+        z-index: 2;
+    }
+
+    .hero-v2-photo-frame {
+        position: absolute;
+        right: 8%;
+        bottom: 0;
+        width: 72%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 0;
+        background: transparent;
+    }
+
+    .hero-v2-photo-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+    }
+
+    .hero-v2-actions {
+        flex-direction: row;
+    }
+
+    .hero-v2-primary,
+    .hero-v2-secondary {
+        width: auto;
+    }
+}
