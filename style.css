@@ -5153,3 +5153,9 @@ section h2 {
 .final-callout-three {
     top: 350px;
 }
+
+.final-hero-person {
+    left: 42%;
+    width: 42%;
+    height: 82%;
+}
