@@ -29,7 +29,11 @@ nav ul{display:flex;gap:22px;list-style:none;font-size:.88rem;color:var(--mut);f
 .hero{position:sticky;top:0;height:100vh;display:flex;align-items:center;overflow:hidden;padding-top:60px}
 .hero .wrap{width:100%;position:relative}
 .glow{position:absolute;right:4%;top:50%;width:min(520px,70vw);aspect-ratio:1;transform:translateY(-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,106,26,.35),transparent 65%)}
-.photo{position:absolute;right:2%;bottom:-70px;height:min(78vh,640px);max-width:55%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 20px 50px rgba(0,0,0,.6))}
+.photo{position:absolute;right:2%;bottom:-70px;height:min(78vh,640px);max-width:55%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 20px 50px rgba(0,0,0,.6));-webkit-mask-image:linear-gradient(#000 80%,transparent 98%);mask-image:linear-gradient(#000 80%,transparent 98%)}
+.ft{position:absolute;z-index:2;font-family:ui-monospace,Menlo,monospace;font-size:.72rem;letter-spacing:.04em;color:var(--text);background:var(--bg2);border:1px solid var(--o);border-radius:99px;padding:6px 14px;box-shadow:0 0 22px rgba(255,106,26,.3);animation:ftf 6s ease-in-out infinite}.ft::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--o);margin-right:8px}
+.ft.a{right:15%;top:21%}.ft.b{right:1%;top:34%;animation-delay:-2s}.ft.c{right:4%;top:62%;animation-delay:-4s}@keyframes ftf{50%{transform:translateY(-10px)}}
+.hcopy .meta{max-width:min(640px,56%)}
+@media (prefers-reduced-motion:reduce){.ft{animation:none}}
 .initials{position:absolute;right:8%;top:50%;transform:translateY(-50%);font-size:12rem;font-weight:900;color:var(--ini)}
 .hcopy{position:relative;z-index:3;max-width:780px}
 .hi{font-family:ui-monospace,Menlo,monospace;font-size:.85rem;color:var(--mut);margin-bottom:14px}.hi b{color:var(--o)}
@@ -113,7 +117,7 @@ footer{text-align:center;padding:26px;color:var(--mut);font-size:.82rem;border-t
 @media (max-width:820px){.abt{grid-template-columns:1fr}}
 .rv{opacity:0;transform:translateY(26px);transition:.7s}.rv.on{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.w{transition:none}.rt{stroke-dashoffset:0;animation:none!important}html{scroll-behavior:auto}}
-@media (max-width:820px){.pb{grid-template-columns:1fr;padding:20px}.photo{max-width:70%;opacity:.55;right:-4%}.hs{height:240vh}nav ul{gap:14px;font-size:.8rem}.initials{font-size:7rem}}
+@media (max-width:820px){.ft{display:none}.hcopy .meta{max-width:none}.pb{grid-template-columns:1fr;padding:20px}.photo{max-width:70%;opacity:.55;right:-4%}.hs{height:240vh}nav ul{gap:14px;font-size:.8rem}.initials{font-size:7rem}}
 </style>
 </head>
 <body>
@@ -132,6 +136,7 @@ footer{text-align:center;padding:26px;color:var(--mut);font-size:.82rem;border-t
 <div class="hs" id="home"><section class="hero"><div class="wrap">
 <div class="glow"></div>
 <img class="photo" src="Professional%20Indian%20Man%20Portrait%20Cutout.png" alt="Vijayakumar" onerror="this.outerHTML='<div class=initials>VK</div>'">
+<span class="ft a">Lean Six Sigma</span><span class="ft b">Power BI</span><span class="ft c">Supply Chain</span>
 <div class="hcopy">
 <p class="hi">HI, I'M <b>VIJAYAKUMAR</b></p>
 <div class="words">
